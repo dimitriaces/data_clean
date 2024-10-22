@@ -73,6 +73,7 @@ def main():
         # Get the set of processing types already done for this file
         processed_types = processed_files.get(base_filename, set())
 
+        # Determine how to clean the data based on previous
         # Determine how to clean the data based on previous processing
         if "Processed for Web Scraping" in processed_types and "Processed for Phone Numbers" in processed_types:
             print(Fore.YELLOW + "This file has already been processed for both web scraping and phone numbers. Skipping...")
